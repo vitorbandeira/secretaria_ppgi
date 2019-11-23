@@ -1,7 +1,7 @@
 require 'selenium-webdriver'
 require 'rubygems'
 
-
+#
 driver = Selenium::WebDriver.for :chrome
 
 Dado("que acesso o banco e tem-se  informações a inserir") do

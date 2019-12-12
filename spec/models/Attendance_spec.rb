@@ -19,9 +19,10 @@ require 'rails_helper'
 				expect(at).to eq(true) 
 			end
 
-			  it "return the correct name of title" do # sim, você pode user 'it' (lê-se como 'isso tem um nome')
-   				 at = Attendance.new(title: "Funcionario") # criando uma nova titulo
-   				 expect(at.title).to eq("Funcionario") # 
+
+			it "return the correct name of title" do 
+				at = Attendance.new(title: "Funcionario")
+				expect(at.title).to eq("Funcionario") 
 			end
 			# create salva no banco
 			it "return the correct name of content" do
@@ -30,7 +31,6 @@ require 'rails_helper'
 			end
 
 		end
-
 		# Teste de edicao no banco de dados
 		context 'when data exists' do
 			it "edit of the title was successfully" do
@@ -52,7 +52,8 @@ require 'rails_helper'
 				expect(at.content).to eq("proativo")
 			end
 		end
-		# exclusao de dados
+
+  # exclusao de dados
 		context 'when datas exists' do
 			it "destroy of the data was successfully " do
 				at = Attendance.create(title: "casa" , content: "boa")
@@ -60,8 +61,8 @@ require 'rails_helper'
 				expect(at.title).to eq("casa")
 			end
 		end
+	
 		# Teste sobre busca de dados no banco de dados
-
 		context "files attachment" do
 			it "creates a attendance with a file" do
 				attendance = create(:Attendance)
